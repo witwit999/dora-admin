@@ -1,0 +1,390 @@
+# Dora Admin Panel - Development Rules & Reference
+
+## Project Overview
+This is an a@dmin panel for a product gallery app. The frontend is complete with mock data and ready for backend integration. The app targets:
+- Mobile: iOS, Android
+- Tablets: iOS, Android
+- Desktop: macOS, Windows
+
+## Current Architecture
+
+### File Structure
+```
+lib/
+├── main.dart                    # App entry point with Riverpod ProviderScope and GoRouter
+├── core/
+│   ├── theme/                  # App theme configuration (app_theme.dart)
+│   ├── constants/              # App constants (app_constants.dart)
+│   └── utils/                  # Utility functions (to be added)
+├── features/
+│   ├── splash/                 # Splash screen
+│   ├── auth/                   # Authentication module
+│   ├── products/               # Product management (CRUD)
+│   └── notifications/          # Notification management
+├── shared/
+│   ├── widgets/                # Reusable widgets
+│   ├── models/                 # Data models (Product, Notification, User)
+│   └── providers/               # Riverpod providers
+└── routes/                     # GoRouter configuration
+```
+
+### Technology Stack
+- **State Management**: Flutter Riverpod (flutter_riverpod)
+- **Routing**: GoRouter (go_router)
+- **Image Picker**: image_picker
+- **Date/Time**: intl
+- **File Handling**: path_provider
+
+### Theme Configuration
+- **Primary Color**: #561519 (dark red)
+- **Secondary Color**: #daba4a (gold)
+- **Material 3**: Enabled
+- Theme file: `lib/core/theme/app_theme.dart`
+
+### Current Features Implemented
+
+#### 1. Authentication
+- Login screen with username/password
+- Mock authentication provider (`lib/shared/providers/auth_provider.dart`)
+- Auth state management with Riverpod
+- Route guards for protected routes
+
+#### 2. Products Management
+- Products list (grid view)
+- Create/Edit product form
+- Delete product functionality
+- Image picker (camera/gallery)
+- Product model with: name, description, image, price (optional)
+- Mock products provider (`lib/shared/providers/products_provider.dart`)
+
+#### 3. Notifications
+- Notifications list with status indicators
+- Send notification form
+- Immediate or scheduled notifications
+- Date/time picker for scheduling
+- Mock notifications provider (`lib/shared/providers/notifications_provider.dart`)
+
+#### 4. Navigation
+- Splash screen with logo
+- Drawer navigation
+- Route configuration in `lib/routes/app_router.dart`
+- Protected routes with authentication guards
+
+### Routes
+- `/splash` - Splash screen
+- `/login` - Login screen
+- `/products` - Products list
+- `/products/new` - Create product
+- `/products/:id/edit` - Edit product
+- `/notifications` - Notifications list
+- `/notifications/send` - Send notification
+
+### Models
+- `Product` - name, description, imagePath/imageUrl, price, timestamps
+- `NotificationModel` - message, scheduledTime, isScheduled, status
+- `User` - id, username, email, name
+
+## Next Phase: Backend Integration
+
+### Current Status
+- ✅ Frontend UI complete
+- ✅ Mock data providers ready
+- ✅ Models with JSON serialization methods
+- ⏳ Backend integration starting
+
+### Integration Guidelines
+
+#### API Service Structure
+- Create `lib/core/services/api_service.dart` for HTTP client setup
+- Create feature-specific services:
+  - `lib/core/services/auth_service.dart`
+  - `lib/core/services/products_service.dart`
+  - `lib/core/services/notifications_service.dart`
+- Use dependency injection with Riverpod providers
+- Handle API errors gracefully
+
+#### Provider Updates
+- Replace mock data in providers with API calls
+- Maintain same state structure for seamless transition
+- Add proper error handling in providers
+- Use `AsyncValue` for loading/error states where appropriate
+
+#### Error Handling Best Practices
+- Create centralized error handler: `lib/core/utils/error_handler.dart`
+- Display user-friendly error messages (no technical jargon)
+- Use SnackBars for temporary errors
+- Use dialogs for critical errors requiring user action
+- Log errors for debugging (use a logging package)
+- Handle network errors specifically (no internet, timeout, etc.)
+- Provide retry mechanisms where appropriate
+
+Example error messages:
+- ❌ "Error: 401 Unauthorized"
+- ✅ "Please check your login credentials and try again"
+- ❌ "NetworkException: Connection timeout"
+- ✅ "Unable to connect. Please check your internet connection and try again"
+
+## Localization (Arabic Support)
+
+### Implementation Requirements
+- Add `flutter_localizations` and `intl` packages
+- Create `lib/l10n/` directory for localization files
+- Support English (default) and Arabic (RTL)
+- Use `AppLocalizations` for all user-facing strings
+- Never hardcode strings in UI
+
+### File Structure for Localization
+```
+lib/
+└── l10n/
+    ├── app_en.arb              # English strings
+    └── app_ar.arb              # Arabic strings
+```
+
+### Best Practices
+- Extract all user-facing text to localization files
+- Use parameterized strings for dynamic content
+- Test RTL layout for Arabic
+- Ensure proper font support for Arabic characters
+- Test date/time formatting for Arabic locale
+
+### Example Usage
+```dart
+// ❌ Bad
+Text('Products')
+
+// ✅ Good
+Text(AppLocalizations.of(context)!.products)
+```
+
+## Code Quality & Best Practices
+
+### Reusability Guidelines
+
+#### Widgets
+- Extract reusable widgets to `lib/shared/widgets/`
+- Keep widgets small and focused (single responsibility)
+- Use composition over inheritance
+- Create base widgets for common patterns:
+  - `BaseButton`, `BaseTextField`, `BaseCard`, etc.
+- Document widget parameters and usage
+
+#### Providers
+- Keep providers focused on single features
+- Use `family` providers for parameterized state
+- Create base provider patterns for common operations (CRUD)
+- Share common logic through utility functions
+
+#### Services
+- Separate business logic from UI
+- Create service classes for API calls
+- Use dependency injection (Riverpod providers)
+- Make services testable (mockable)
+
+#### Models
+- Include `toJson()` and `fromJson()` methods
+- Use `copyWith()` for immutable updates
+- Validate data in models where appropriate
+- Create model extensions for computed properties
+
+### File Naming Conventions
+- Files: `snake_case.dart`
+- Classes: `PascalCase`
+- Variables/Functions: `camelCase`
+- Constants: `UPPER_SNAKE_CASE`
+- Private: `_leadingUnderscore`
+
+### Code Organization
+- One class per file (except for small related classes)
+- Group related functionality together
+- Keep files under 300 lines when possible
+- Use barrel exports (`index.dart`) for feature modules
+
+### Responsive Design
+- Test on multiple screen sizes
+- Use `LayoutBuilder` or `MediaQuery` for responsive layouts
+- Create responsive widgets for common patterns
+- Support both portrait and landscape orientations
+- Use `SafeArea` appropriately
+- Consider tablet-specific layouts (use `isTablet` checks)
+
+### Platform-Specific Considerations
+- Use `Platform.isIOS`, `Platform.isAndroid`, etc. for platform checks
+- Handle platform-specific UI differences
+- Test on all target platforms
+- Use platform-appropriate icons and styling
+
+## Error Handling Strategy
+
+### Error Types to Handle
+1. **Network Errors**
+   - No internet connection
+   - Connection timeout
+   - Server errors (500, 503, etc.)
+
+2. **Authentication Errors**
+   - Invalid credentials
+   - Token expiration
+   - Unauthorized access
+
+3. **Validation Errors**
+   - Form validation
+   - Input format errors
+   - Required field errors
+
+4. **Business Logic Errors**
+   - Duplicate entries
+   - Resource not found
+   - Permission denied
+
+### Error Display Patterns
+```dart
+// SnackBar for temporary errors
+ScaffoldMessenger.of(context).showSnackBar(
+  SnackBar(
+    content: Text(userFriendlyMessage),
+    backgroundColor: AppTheme.errorColor,
+    action: SnackBarAction(
+      label: 'Retry',
+      onPressed: () => retryAction(),
+    ),
+  ),
+);
+
+// Dialog for critical errors
+showDialog(
+  context: context,
+  builder: (context) => AlertDialog(
+    title: Text('Error'),
+    content: Text(userFriendlyMessage),
+    actions: [/* actions */],
+  ),
+);
+```
+
+## Testing Considerations
+- Write unit tests for providers
+- Write widget tests for UI components
+- Test error handling scenarios
+- Test localization (both languages)
+- Test responsive layouts
+- Test on all target platforms
+
+## Dependencies Management
+- Keep dependencies up to date
+- Document why each dependency is needed
+- Avoid unnecessary dependencies
+- Use `dependency_validator` to check for unused dependencies
+
+## Git & Version Control
+- Write clear commit messages
+- Use feature branches
+- Keep commits atomic
+- Document breaking changes
+
+## Performance Considerations
+- Lazy load images
+- Use `const` constructors where possible
+- Avoid unnecessary rebuilds
+- Optimize list rendering (use `ListView.builder`)
+- Cache API responses where appropriate
+- Use `FutureBuilder` and `StreamBuilder` efficiently
+
+## Security Considerations
+- Never commit API keys or secrets
+- Use secure storage for tokens
+- Validate all user inputs
+- Sanitize data before display
+- Use HTTPS for all API calls
+- Implement proper authentication flow
+
+## Documentation
+- Document complex logic
+- Add comments for non-obvious code
+- Keep README.md updated
+- Document API integration points
+- Create architecture diagrams if needed
+
+## Common Patterns
+
+### Provider Pattern
+```dart
+// State
+class FeatureState {
+  final List<Item> items;
+  final bool isLoading;
+  final String? error;
+  // ...
+}
+
+// Notifier
+class FeatureNotifier extends StateNotifier<FeatureState> {
+  FeatureNotifier(this._service) : super(FeatureState());
+  
+  final FeatureService _service;
+  
+  Future<void> loadItems() async {
+    state = state.copyWith(isLoading: true);
+    try {
+      final items = await _service.getItems();
+      state = state.copyWith(items: items, isLoading: false);
+    } catch (e) {
+      state = state.copyWith(
+        error: ErrorHandler.getUserFriendlyMessage(e),
+        isLoading: false,
+      );
+    }
+  }
+}
+
+// Provider
+final featureProvider = StateNotifierProvider<FeatureNotifier, FeatureState>(
+  (ref) => FeatureNotifier(ref.read(featureServiceProvider)),
+);
+```
+
+### Service Pattern
+```dart
+class FeatureService {
+  final ApiService _api;
+  
+  FeatureService(this._api);
+  
+  Future<List<Item>> getItems() async {
+    try {
+      final response = await _api.get('/items');
+      return (response.data as List)
+          .map((json) => Item.fromJson(json))
+          .toList();
+    } catch (e) {
+      throw ApiException.fromError(e);
+    }
+  }
+}
+```
+
+## Notes for Backend Integration
+- All models have `toJson()` and `fromJson()` methods ready
+- Providers are structured to easily replace mock data with API calls
+- Maintain the same state structure during integration
+- Add loading states for all async operations
+- Implement proper error handling from the start
+- Use environment variables for API base URLs
+- Create API response models if backend returns wrapper objects
+
+## Current Assets
+- `Assets/app_icon_admin.png` - App icon
+- `Assets/logo_rransperant_admin.png` - Transparent logo
+- `Assets/Logo_white_background_admin.png` - Logo with white background
+
+## Important Reminders
+- ✅ Always use localization for user-facing strings
+- ✅ Handle errors gracefully with user-friendly messages
+- ✅ Test on all target platforms (mobile, tablet, desktop)
+- ✅ Follow the established file structure
+- ✅ Keep code reusable and maintainable
+- ✅ Write clear, self-documenting code
+- ✅ Use Riverpod for state management
+- ✅ Use GoRouter for navigation
+- ✅ Maintain Material 3 design system
+- ✅ Support RTL for Arabic localization
