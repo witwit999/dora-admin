@@ -1,0 +1,661 @@
+{
+  "@@locale": "en",
+  
+  "appTitle": "Dora Admin",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  
+  "languageEnglish": "English",
+  "@languageEnglish": {
+    "description": "English language name"
+  },
+  
+  "languageArabic": "العربية",
+  "@languageArabic": {
+    "description": "Arabic language name in Arabic"
+  },
+  
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Language picker dialog title"
+  },
+  
+  "language": "Language",
+  "@language": {
+    "description": "Language label"
+  },
+  
+  "loginTitle": "Admin Login",
+  "@loginTitle": {
+    "description": "Login screen title"
+  },
+  
+  "loginSubtitle": "Sign in to manage your products",
+  "@loginSubtitle": {
+    "description": "Login screen subtitle"
+  },
+  
+  "loginPhoneLabel": "Phone Number",
+  "@loginPhoneLabel": {
+    "description": "Phone number field label"
+  },
+  
+  "loginPhoneHint": "username",
+  "@loginPhoneHint": {
+    "description": "Phone number field hint"
+  },
+  
+  "loginPhoneError": "Please enter your username",
+  "@loginPhoneError": {
+    "description": "Phone number validation error"
+  },
+  
+  "loginPasswordLabel": "Password",
+  "@loginPasswordLabel": {
+    "description": "Password field label"
+  },
+  
+  "loginPasswordError": "Please enter your password",
+  "@loginPasswordError": {
+    "description": "Password validation error"
+  },
+  
+  "loginPasswordLengthError": "Password must be at least {length} characters",
+  "@loginPasswordLengthError": {
+    "description": "Password length validation error",
+    "placeholders": {
+      "length": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "loginButton": "Login",
+  "@loginButton": {
+    "description": "Login button text"
+  },
+  
+  "productsTitle": "Products",
+  "@productsTitle": {
+    "description": "Products screen title"
+  },
+  
+  "productsSearchResults": "Search Results",
+  "@productsSearchResults": {
+    "description": "Products search results title"
+  },
+  
+  "productsSearchHint": "Search products by name...",
+  "@productsSearchHint": {
+    "description": "Search field hint"
+  },
+  
+  "productsSearchTooltip": "Search products",
+  "@productsSearchTooltip": {
+    "description": "Search button tooltip"
+  },
+  
+  "productsCloseSearchTooltip": "Close search",
+  "@productsCloseSearchTooltip": {
+    "description": "Close search button tooltip"
+  },
+  
+  "productsSearchResultsCount": "Found {count} {count, plural, =1{result} other{results}} for \"{query}\"",
+  "@productsSearchResultsCount": {
+    "description": "Search results count message",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "productsClear": "Clear",
+  "@productsClear": {
+    "description": "Clear search button"
+  },
+  
+  "productsNoProductsFound": "No products found",
+  "@productsNoProductsFound": {
+    "description": "No products found in search"
+  },
+  
+  "productsTryDifferentSearch": "Try a different search term",
+  "@productsTryDifferentSearch": {
+    "description": "Try different search message"
+  },
+  
+  "productsNoProductsYet": "No products yet",
+  "@productsNoProductsYet": {
+    "description": "No products empty state"
+  },
+  
+  "productsAddFirstProduct": "Tap the + button to add your first product",
+  "@productsAddFirstProduct": {
+    "description": "Add first product message"
+  },
+  
+  "productsPullToRefresh": "Pull down to refresh",
+  "@productsPullToRefresh": {
+    "description": "Pull to refresh hint"
+  },
+  
+  "productsEndOfList": "End of list",
+  "@productsEndOfList": {
+    "description": "End of list message"
+  },
+  
+  "productsDeleteTitle": "Delete Product",
+  "@productsDeleteTitle": {
+    "description": "Delete product dialog title"
+  },
+  
+  "productsDeleteMessage": "Are you sure you want to delete \"{name}\"?",
+  "@productsDeleteMessage": {
+    "description": "Delete product confirmation message",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "productsDeleteSuccess": "Product deleted successfully",
+  "@productsDeleteSuccess": {
+    "description": "Product deleted success message"
+  },
+  
+  "productsDeleteFailed": "Failed to delete product",
+  "@productsDeleteFailed": {
+    "description": "Product delete failed message"
+  },
+  
+  "productsDeletingProgress": "Deleting product...",
+  "@productsDeletingProgress": {
+    "description": "Deleting product progress message"
+  },
+  
+  "productsEditTooltip": "Edit",
+  "@productsEditTooltip": {
+    "description": "Edit button tooltip"
+  },
+  
+  "productsDeleteTooltip": "Delete",
+  "@productsDeleteTooltip": {
+    "description": "Delete button tooltip"
+  },
+  
+  "productFormEditTitle": "Edit Product",
+  "@productFormEditTitle": {
+    "description": "Edit product form title"
+  },
+  
+  "productFormNewTitle": "New Product",
+  "@productFormNewTitle": {
+    "description": "New product form title"
+  },
+  
+  "productFormImageLabel": "Product Image",
+  "@productFormImageLabel": {
+    "description": "Product image label"
+  },
+  
+  "productFormImageRequired": "Product Image *",
+  "@productFormImageRequired": {
+    "description": "Product image label with required indicator"
+  },
+  
+  "productFormImageError": "Please select a product image",
+  "@productFormImageError": {
+    "description": "Product image validation error"
+  },
+  
+  "productFormNameLabel": "Product Name *",
+  "@productFormNameLabel": {
+    "description": "Product name field label"
+  },
+  
+  "productFormNameHint": "Enter product name",
+  "@productFormNameHint": {
+    "description": "Product name field hint"
+  },
+  
+  "productFormNameError": "Product name is required",
+  "@productFormNameError": {
+    "description": "Product name validation error"
+  },
+  
+  "productFormDescriptionLabel": "Description *",
+  "@productFormDescriptionLabel": {
+    "description": "Product description field label"
+  },
+  
+  "productFormDescriptionHint": "Enter product description",
+  "@productFormDescriptionHint": {
+    "description": "Product description field hint"
+  },
+  
+  "productFormDescriptionError": "Description is required",
+  "@productFormDescriptionError": {
+    "description": "Product description validation error"
+  },
+  
+  "productFormPriceLabel": "Price (Optional)",
+  "@productFormPriceLabel": {
+    "description": "Product price field label"
+  },
+  
+  "productFormPriceHint": "0.00",
+  "@productFormPriceHint": {
+    "description": "Product price field hint"
+  },
+  
+  "productFormPriceError": "Please enter a valid price",
+  "@productFormPriceError": {
+    "description": "Product price validation error"
+  },
+  
+  "productFormUpdateButton": "Update Product",
+  "@productFormUpdateButton": {
+    "description": "Update product button text"
+  },
+  
+  "productFormCreateButton": "Create Product",
+  "@productFormCreateButton": {
+    "description": "Create product button text"
+  },
+  
+  "productFormUpdateSuccess": "Product updated successfully",
+  "@productFormUpdateSuccess": {
+    "description": "Product update success message"
+  },
+  
+  "productFormCreateSuccess": "Product created successfully",
+  "@productFormCreateSuccess": {
+    "description": "Product create success message"
+  },
+  
+  "productFormNotFound": "Product not found",
+  "@productFormNotFound": {
+    "description": "Product not found error title"
+  },
+  
+  "productFormNotFoundMessage": "The product may have been deleted",
+  "@productFormNotFoundMessage": {
+    "description": "Product not found error message"
+  },
+  
+  "notificationsTitle": "Notifications",
+  "@notificationsTitle": {
+    "description": "Notifications screen title"
+  },
+  
+  "notificationsNoNotificationsYet": "No notifications yet",
+  "@notificationsNoNotificationsYet": {
+    "description": "No notifications empty state"
+  },
+  
+  "notificationsAddFirst": "Tap the + button to send your first notification",
+  "@notificationsAddFirst": {
+    "description": "Add first notification message"
+  },
+  
+  "notificationsStatusSent": "Sent",
+  "@notificationsStatusSent": {
+    "description": "Notification status: sent"
+  },
+  
+  "notificationsStatusScheduled": "Scheduled",
+  "@notificationsStatusScheduled": {
+    "description": "Notification status: scheduled"
+  },
+  
+  "notificationsStatusPending": "Pending",
+  "@notificationsStatusPending": {
+    "description": "Notification status: pending"
+  },
+  
+  "notificationsStatusFailed": "Failed",
+  "@notificationsStatusFailed": {
+    "description": "Notification status: failed"
+  },
+  
+  "notificationsScheduledFor": "Scheduled for {date} at {time}",
+  "@notificationsScheduledFor": {
+    "description": "Scheduled notification time message",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "notificationsSentOn": "Sent on {date} at {time}",
+  "@notificationsSentOn": {
+    "description": "Sent notification time message",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "notificationsCreated": "Created: {date}",
+  "@notificationsCreated": {
+    "description": "Notification created date",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "sendNotificationTitle": "Send Notification",
+  "@sendNotificationTitle": {
+    "description": "Send notification screen title"
+  },
+  
+  "sendNotificationMessageLabel": "Message *",
+  "@sendNotificationMessageLabel": {
+    "description": "Notification message field label"
+  },
+  
+  "sendNotificationMessageHint": "Enter notification message",
+  "@sendNotificationMessageHint": {
+    "description": "Notification message field hint"
+  },
+  
+  "sendNotificationMessageError": "Message is required",
+  "@sendNotificationMessageError": {
+    "description": "Notification message validation error"
+  },
+  
+  "sendNotificationScheduleToggle": "Schedule Notification",
+  "@sendNotificationScheduleToggle": {
+    "description": "Schedule notification toggle label"
+  },
+  
+  "sendNotificationScheduledSubtitle": "Notification will be sent at the selected time",
+  "@sendNotificationScheduledSubtitle": {
+    "description": "Scheduled notification subtitle"
+  },
+  
+  "sendNotificationImmediateSubtitle": "Send notification immediately",
+  "@sendNotificationImmediateSubtitle": {
+    "description": "Immediate notification subtitle"
+  },
+  
+  "sendNotificationScheduleDateLabel": "Schedule Date & Time",
+  "@sendNotificationScheduleDateLabel": {
+    "description": "Schedule date/time label"
+  },
+  
+  "sendNotificationScheduleDateHint": "Tap to select date and time",
+  "@sendNotificationScheduleDateHint": {
+    "description": "Schedule date/time hint"
+  },
+  
+  "sendNotificationScheduleDateError": "Please select a date and time for scheduled notification",
+  "@sendNotificationScheduleDateError": {
+    "description": "Schedule date/time validation error"
+  },
+  
+  "sendNotificationScheduleButton": "Schedule Notification",
+  "@sendNotificationScheduleButton": {
+    "description": "Schedule notification button"
+  },
+  
+  "sendNotificationSendButton": "Send Notification",
+  "@sendNotificationSendButton": {
+    "description": "Send notification button"
+  },
+  
+  "sendNotificationScheduledSuccess": "Notification scheduled successfully",
+  "@sendNotificationScheduledSuccess": {
+    "description": "Notification scheduled success message"
+  },
+  
+  "sendNotificationSentSuccess": "Notification sent successfully",
+  "@sendNotificationSentSuccess": {
+    "description": "Notification sent success message"
+  },
+  
+  "drawerAdminId": "Admin #{id}",
+  "@drawerAdminId": {
+    "description": "Admin ID display",
+    "placeholders": {
+      "id": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "drawerAdmin": "Admin",
+  "@drawerAdmin": {
+    "description": "Admin default label"
+  },
+  
+  "drawerProducts": "Products",
+  "@drawerProducts": {
+    "description": "Products menu item"
+  },
+  
+  "drawerNotifications": "Notifications",
+  "@drawerNotifications": {
+    "description": "Notifications menu item"
+  },
+
+  "drawerChangePassword": "Change Password",
+  "@drawerChangePassword": {
+    "description": "Change password menu item"
+  },
+  
+  "drawerLogout": "Logout",
+  "@drawerLogout": {
+    "description": "Logout menu item"
+  },
+
+  "changePasswordTitle": "Change Password",
+  "@changePasswordTitle": {
+    "description": "Change password screen title"
+  },
+
+  "changePasswordSubtitle": "Update your password to keep your account secure.",
+  "@changePasswordSubtitle": {
+    "description": "Change password screen subtitle"
+  },
+
+  "changePasswordCurrentPasswordLabel": "Current Password",
+  "@changePasswordCurrentPasswordLabel": {
+    "description": "Current password field label"
+  },
+
+  "changePasswordCurrentPasswordHint": "Enter your current password",
+  "@changePasswordCurrentPasswordHint": {
+    "description": "Current password field hint"
+  },
+
+  "changePasswordCurrentPasswordError": "Please enter your current password",
+  "@changePasswordCurrentPasswordError": {
+    "description": "Current password validation error"
+  },
+
+  "changePasswordNewPasswordLabel": "New Password",
+  "@changePasswordNewPasswordLabel": {
+    "description": "New password field label"
+  },
+
+  "changePasswordNewPasswordHint": "Enter a new password",
+  "@changePasswordNewPasswordHint": {
+    "description": "New password field hint"
+  },
+
+  "changePasswordNewPasswordError": "Please enter a new password",
+  "@changePasswordNewPasswordError": {
+    "description": "New password validation error"
+  },
+
+  "changePasswordNewSameAsCurrentError": "New password must be different from the current password",
+  "@changePasswordNewSameAsCurrentError": {
+    "description": "Validation error when new password equals current password"
+  },
+
+  "changePasswordConfirmPasswordLabel": "Confirm New Password",
+  "@changePasswordConfirmPasswordLabel": {
+    "description": "Confirm password field label"
+  },
+
+  "changePasswordConfirmPasswordHint": "Re-enter the new password",
+  "@changePasswordConfirmPasswordHint": {
+    "description": "Confirm password field hint"
+  },
+
+  "changePasswordConfirmPasswordError": "Please confirm your new password",
+  "@changePasswordConfirmPasswordError": {
+    "description": "Confirm password validation error"
+  },
+
+  "changePasswordPasswordsDoNotMatch": "Passwords do not match",
+  "@changePasswordPasswordsDoNotMatch": {
+    "description": "Validation error when passwords do not match"
+  },
+
+  "changePasswordButton": "Update Password",
+  "@changePasswordButton": {
+    "description": "Change password submit button"
+  },
+
+  "changePasswordSuccess": "Password updated successfully",
+  "@changePasswordSuccess": {
+    "description": "Change password success message"
+  },
+  
+  "commonCancel": "Cancel",
+  "@commonCancel": {
+    "description": "Cancel button"
+  },
+  
+  "commonDelete": "Delete",
+  "@commonDelete": {
+    "description": "Delete button"
+  },
+  
+  "commonRetry": "Retry",
+  "@commonRetry": {
+    "description": "Retry button"
+  },
+  
+  "commonGoBack": "Go Back",
+  "@commonGoBack": {
+    "description": "Go back button"
+  },
+  
+  "errorConnectionTimeout": "Connection timeout. Please check your internet connection and try again.",
+  "@errorConnectionTimeout": {
+    "description": "Connection timeout error"
+  },
+  
+  "errorUnableToConnect": "Unable to connect. Please check your internet connection and try again.",
+  "@errorUnableToConnect": {
+    "description": "Unable to connect error"
+  },
+  
+  "errorRequestCancelled": "Request was cancelled.",
+  "@errorRequestCancelled": {
+    "description": "Request cancelled error"
+  },
+  
+  "errorCertificate": "Security certificate error. Please try again later.",
+  "@errorCertificate": {
+    "description": "Certificate error"
+  },
+  
+  "errorNoInternet": "No internet connection. Please check your network settings.",
+  "@errorNoInternet": {
+    "description": "No internet error"
+  },
+  
+  "errorUnexpected": "An unexpected error occurred. Please try again.",
+  "@errorUnexpected": {
+    "description": "Unexpected error"
+  },
+  
+  "errorInvalidRequest": "Invalid request. Please check your input and try again.",
+  "@errorInvalidRequest": {
+    "description": "400 Bad Request error"
+  },
+  
+  "errorSessionExpired": "Session expired. Please log in again.",
+  "@errorSessionExpired": {
+    "description": "401 Unauthorized error"
+  },
+  
+  "errorPermissionDenied": "You do not have permission to perform this action.",
+  "@errorPermissionDenied": {
+    "description": "403 Forbidden error"
+  },
+  
+  "errorNotFound": "The requested resource was not found.",
+  "@errorNotFound": {
+    "description": "404 Not Found error"
+  },
+  
+  "errorTooManyRequests": "Too many requests. Please wait a moment and try again.",
+  "@errorTooManyRequests": {
+    "description": "429 Too Many Requests error"
+  },
+  
+  "errorServerError": "Server error. Please try again later.",
+  "@errorServerError": {
+    "description": "500/502/503 Server error"
+  },
+  
+  "errorGeneric": "An error occurred. Please try again.",
+  "@errorGeneric": {
+    "description": "Generic error message"
+  },
+  
+  "errorLoginFailed": "Login failed. Please try again.",
+  "@errorLoginFailed": {
+    "description": "Login failed error"
+  },
+  
+  "errorNoRefreshToken": "No refresh token available. Please login again.",
+  "@errorNoRefreshToken": {
+    "description": "No refresh token error"
+  },
+  
+  "errorTokenRefreshFailed": "Token refresh failed. Please login again.",
+  "@errorTokenRefreshFailed": {
+    "description": "Token refresh failed error"
+  },
+  
+  "imagePickerChooseSource": "Choose Image Source",
+  "@imagePickerChooseSource": {
+    "description": "Image picker source chooser title"
+  },
+  
+  "imagePickerCamera": "Camera",
+  "@imagePickerCamera": {
+    "description": "Camera option"
+  },
+  
+  "imagePickerGallery": "Gallery",
+  "@imagePickerGallery": {
+    "description": "Gallery option"
+  },
+  "productFormFeaturedLabel": "Featured",
+  "@productFormFeaturedLabel": {
+    "description": "Featured option"
+  }
+}

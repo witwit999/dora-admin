@@ -1,0 +1,250 @@
+{
+  "@@locale": "ar",
+  
+  "appTitle": "دورا الإدارة",
+  
+  "languageEnglish": "English",
+  
+  "languageArabic": "العربية",
+  
+  "selectLanguage": "اختر اللغة",
+  
+  "language": "اللغة",
+  
+  "loginTitle": "تسجيل دخول المسؤول",
+  
+  "loginSubtitle": "سجل الدخول لإدارة منتجاتك",
+  
+  "loginPhoneLabel": "رقم الهاتف",
+  
+  "loginPhoneHint": "اسم المستخدم",
+  
+  "loginPhoneError": "الرجاء إدخال اسم المستخدم",
+  
+  "loginPasswordLabel": "كلمة المرور",
+  
+  "loginPasswordError": "الرجاء إدخال كلمة المرور",
+  
+  "loginPasswordLengthError": "يجب أن تكون كلمة المرور {length} أحرف على الأقل",
+  
+  "loginButton": "تسجيل الدخول",
+  
+  "productsTitle": "المنتجات",
+  
+  "productsSearchResults": "نتائج البحث",
+  
+  "productsSearchHint": "ابحث عن المنتجات بالاسم...",
+  
+  "productsSearchTooltip": "البحث عن المنتجات",
+  
+  "productsCloseSearchTooltip": "إغلاق البحث",
+  
+  "productsSearchResultsCount": "تم العثور على {count} {count, plural, =1{نتيجة} other{نتائج}} لـ \"{query}\"",
+  
+  "productsClear": "مسح",
+  
+  "productsNoProductsFound": "لم يتم العثور على منتجات",
+  
+  "productsTryDifferentSearch": "جرب مصطلح بحث مختلف",
+  
+  "productsNoProductsYet": "لا توجد منتجات بعد",
+  
+  "productsAddFirstProduct": "انقر على زر + لإضافة منتجك الأول",
+  
+  "productsPullToRefresh": "اسحب لأسفل للتحديث",
+  
+  "productsEndOfList": "نهاية القائمة",
+  
+  "productsDeleteTitle": "حذف المنتج",
+  
+  "productsDeleteMessage": "هل أنت متأكد من حذف \"{name}\"؟",
+  
+  "productsDeleteSuccess": "تم حذف المنتج بنجاح",
+  
+  "productsDeleteFailed": "فشل حذف المنتج",
+  
+  "productsDeletingProgress": "جاري حذف المنتج...",
+  
+  "productsEditTooltip": "تعديل",
+  
+  "productsDeleteTooltip": "حذف",
+  
+  "productFormEditTitle": "تعديل المنتج",
+  
+  "productFormNewTitle": "منتج جديد",
+  
+  "productFormImageLabel": "صورة المنتج",
+  
+  "productFormImageRequired": "صورة المنتج *",
+  
+  "productFormImageError": "الرجاء اختيار صورة للمنتج",
+  
+  "productFormNameLabel": "اسم المنتج *",
+  
+  "productFormNameHint": "أدخل اسم المنتج",
+  
+  "productFormNameError": "اسم المنتج مطلوب",
+  
+  "productFormDescriptionLabel": "الوصف *",
+  
+  "productFormDescriptionHint": "أدخل وصف المنتج",
+  
+  "productFormDescriptionError": "الوصف مطلوب",
+  
+  "productFormPriceLabel": "السعر (اختياري)",
+  
+  "productFormPriceHint": "0.00",
+  
+  "productFormPriceError": "الرجاء إدخال سعر صحيح",
+  
+  "productFormUpdateButton": "تحديث المنتج",
+  
+  "productFormCreateButton": "إنشاء المنتج",
+  
+  "productFormUpdateSuccess": "تم تحديث المنتج بنجاح",
+  
+  "productFormCreateSuccess": "تم إنشاء المنتج بنجاح",
+  
+  "productFormNotFound": "المنتج غير موجود",
+  
+  "productFormNotFoundMessage": "قد يكون المنتج قد تم حذفه",
+  
+  "notificationsTitle": "الإشعارات",
+  
+  "notificationsNoNotificationsYet": "لا توجد إشعارات بعد",
+  
+  "notificationsAddFirst": "انقر على زر + لإرسال إشعارك الأول",
+  
+  "notificationsStatusSent": "تم الإرسال",
+  
+  "notificationsStatusScheduled": "مجدول",
+  
+  "notificationsStatusPending": "قيد الانتظار",
+  
+  "notificationsStatusFailed": "فشل",
+  
+  "notificationsScheduledFor": "مجدول لـ {date} في {time}",
+  
+  "notificationsSentOn": "تم الإرسال في {date} في {time}",
+  
+  "notificationsCreated": "تم الإنشاء: {date}",
+  
+  "sendNotificationTitle": "إرسال إشعار",
+  
+  "sendNotificationMessageLabel": "الرسالة *",
+  
+  "sendNotificationMessageHint": "أدخل رسالة الإشعار",
+  
+  "sendNotificationMessageError": "الرسالة مطلوبة",
+  
+  "sendNotificationScheduleToggle": "جدولة الإشعار",
+  
+  "sendNotificationScheduledSubtitle": "سيتم إرسال الإشعار في الوقت المحدد",
+  
+  "sendNotificationImmediateSubtitle": "إرسال الإشعار فوراً",
+  
+  "sendNotificationScheduleDateLabel": "تاريخ ووقت الجدولة",
+  
+  "sendNotificationScheduleDateHint": "انقر لاختيار التاريخ والوقت",
+  
+  "sendNotificationScheduleDateError": "الرجاء اختيار تاريخ ووقت للإشعار المجدول",
+  
+  "sendNotificationScheduleButton": "جدولة الإشعار",
+  
+  "sendNotificationSendButton": "إرسال الإشعار",
+  
+  "sendNotificationScheduledSuccess": "تم جدولة الإشعار بنجاح",
+  
+  "sendNotificationSentSuccess": "تم إرسال الإشعار بنجاح",
+  
+  "drawerAdminId": "المسؤول #{id}",
+  
+  "drawerAdmin": "المسؤول",
+  
+  "drawerProducts": "المنتجات",
+  
+  "drawerNotifications": "الإشعارات",
+
+  "drawerChangePassword": "تغيير كلمة المرور",
+  
+  "drawerLogout": "تسجيل الخروج",
+
+  "changePasswordTitle": "تغيير كلمة المرور",
+
+  "changePasswordSubtitle": "قم بتحديث كلمة المرور للحفاظ على أمان حسابك.",
+
+  "changePasswordCurrentPasswordLabel": "كلمة المرور الحالية",
+
+  "changePasswordCurrentPasswordHint": "أدخل كلمة المرور الحالية",
+
+  "changePasswordCurrentPasswordError": "الرجاء إدخال كلمة المرور الحالية",
+
+  "changePasswordNewPasswordLabel": "كلمة المرور الجديدة",
+
+  "changePasswordNewPasswordHint": "أدخل كلمة مرور جديدة",
+
+  "changePasswordNewPasswordError": "الرجاء إدخال كلمة مرور جديدة",
+
+  "changePasswordNewSameAsCurrentError": "يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمة المرور الحالية",
+
+  "changePasswordConfirmPasswordLabel": "تأكيد كلمة المرور الجديدة",
+
+  "changePasswordConfirmPasswordHint": "أعد إدخال كلمة المرور الجديدة",
+
+  "changePasswordConfirmPasswordError": "الرجاء تأكيد كلمة المرور الجديدة",
+
+  "changePasswordPasswordsDoNotMatch": "كلمتا المرور غير متطابقتين",
+
+  "changePasswordButton": "تحديث كلمة المرور",
+
+  "changePasswordSuccess": "تم تحديث كلمة المرور بنجاح",
+  
+  "commonCancel": "إلغاء",
+  
+  "commonDelete": "حذف",
+  
+  "commonRetry": "إعادة المحاولة",
+  
+  "commonGoBack": "رجوع",
+  
+  "errorConnectionTimeout": "انتهت مهلة الاتصال. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+  
+  "errorUnableToConnect": "تعذر الاتصال. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+  
+  "errorRequestCancelled": "تم إلغاء الطلب.",
+  
+  "errorCertificate": "خطأ في شهادة الأمان. يرجى المحاولة مرة أخرى لاحقاً.",
+  
+  "errorNoInternet": "لا يوجد اتصال بالإنترنت. يرجى التحقق من إعدادات الشبكة.",
+  
+  "errorUnexpected": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+  
+  "errorInvalidRequest": "طلب غير صالح. يرجى التحقق من المدخلات والمحاولة مرة أخرى.",
+  
+  "errorSessionExpired": "انتهت الجلسة. يرجى تسجيل الدخول مرة أخرى.",
+  
+  "errorPermissionDenied": "ليس لديك إذن لتنفيذ هذا الإجراء.",
+  
+  "errorNotFound": "المورد المطلوب غير موجود.",
+  
+  "errorTooManyRequests": "عدد كبير جداً من الطلبات. يرجى الانتظار لحظة والمحاولة مرة أخرى.",
+  
+  "errorServerError": "خطأ في الخادم. يرجى المحاولة مرة أخرى لاحقاً.",
+  
+  "errorGeneric": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+  
+  "errorLoginFailed": "فشل تسجيل الدخول. يرجى المحاولة مرة أخرى.",
+  
+  "errorNoRefreshToken": "لا يوجد رمز تحديث. يرجى تسجيل الدخول مرة أخرى.",
+  
+  "errorTokenRefreshFailed": "فشل تحديث الرمز. يرجى تسجيل الدخول مرة أخرى.",
+  
+  "imagePickerChooseSource": "اختر مصدر الصورة",
+  
+  "imagePickerCamera": "الكاميرا",
+  
+  "imagePickerGallery": "المعرض",
+
+  "productFormFeaturedLabel": "مميز"
+
+}
